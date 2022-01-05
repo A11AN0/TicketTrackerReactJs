@@ -8,7 +8,9 @@ const App = () => {
   return (
     <>
     <Navbar/>
+    <div className={styles.content}>
     {team.map(teamMember => <Card team={teamMember}/> )}  
+    </div>
     </>
   );
 }

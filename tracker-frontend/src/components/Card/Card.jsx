@@ -1,5 +1,6 @@
 import React from 'react'
 import Counter from '../Counter';
+import styles from './Card.module.scss'
 
 const Card = (props) => {
   const {
@@ -8,9 +9,9 @@ const Card = (props) => {
     id, 
   } = props.team;
   return (
-    <div key={id}>
-      <h2>Name:{name}</h2>
-      <h2>Role:{role}</h2>
+    <div key={id} className={styles.cardBody} >
+      <h2>{name}</h2>
+      <h4>{role}</h4>
       <Counter />
     </div>
   )

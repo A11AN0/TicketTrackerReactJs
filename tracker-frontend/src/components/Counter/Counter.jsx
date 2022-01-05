@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
+import styles from './Counter.module.scss'
 
 const Counter = () => {
   const [ticketNumber, setTicketNumber] = useState(0)
   return (
-    <div>
+    <div className={styles.content}>
       <button onClick={()=>setTicketNumber(ticketNumber+1)}>+</button>
+      <p>{ticketNumber}</p>
       <button onClick={()=>setTicketNumber(ticketNumber > 0? ticketNumber-1 : 0)}>-</button>
-      <h3>{ticketNumber}</h3>
     </div>
   )
 }
